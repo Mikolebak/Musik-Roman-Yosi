@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roman Yosi Music</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+z-index:-1;
+filter:blur(2px);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+header{
+padding:30px 0;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:800;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo span{
+color:#1DB954;
+}
+
+.menu{
+display:flex;
+gap:35px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#1DB954;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+padding:60px 0;
+flex-wrap:wrap;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:360px;
+height:360px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid #9db7ff;
+box-shadow:0 0 60px #7aa2ff;
+}
+
+.blue-check{
+position:absolute;
+bottom:20px;
+right:10px;
+background:#2f8cff;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+font-weight:bold;
+box-shadow:0 0 20px #2f8cff;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.top-title{
+color:#1DB954;
+font-size:18px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.hero-text h1{
+font-size:80px;
+line-height:1;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.verify-inline{
+background:#2f8cff;
+padding:8px 14px;
+border-radius:50px;
+font-size:24px;
+margin-left:10px;
+}
+
+.green-line{
+width:120px;
+height:5px;
+background:#1DB954;
+border-radius:50px;
+margin-bottom:25px;
+}
+
+.bio{
+font-size:24px;
+line-height:1.8;
+color:#ddd;
+max-width:700px;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:40px;
+font-size:18px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.spotify{
+background:#1DB954;
+color:black;
+}
+
+.follow{
+border:2px solid #777;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.socials{
+margin-top:35px;
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+}
+
+.socials a{
+color:white;
+text-decoration:none;
+font-size:18px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.section{
+padding:30px 0 60px;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+font-weight:800;
+margin-bottom:40px;
+}
+
+.green-center{
+width:90px;
+height:5px;
+background:#1DB954;
+margin:15px auto;
+border-radius:50px;
+}
+
+.card{
+background:rgba(15,15,15,.95);
+border:1px solid #222;
+border-radius:28px;
+padding:25px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+margin-bottom:30px;
+backdrop-filter:blur(10px);
+flex-wrap:wrap;
+}
+
+.song-left{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.song-left img{
+width:230px;
+border-radius:18px;
+}
+
+.song-info h3{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.song-info p{
+color:#bbb;
+font-size:20px;
+margin-bottom:20px;
+}
+
+.preview{
+padding:12px 28px;
+border:1px solid #555;
+border-radius:12px;
+display:inline-block;
+}
+
+.spotify-player{
+flex:1;
+min-width:320px;
+}
+
+.spotify-player iframe{
+width:100%;
+height:152px;
+border:none;
+border-radius:16px;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+color:#aaa;
+font-size:18px;
+}
+
+@media(max-width:900px){
+
+.hero{
+justify-content:center;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:52px;
+}
+
+.hero-image img{
+width:270px;
+height:270px;
+}
+
+.card{
+justify-content:center;
+}
+
+.song-left{
+flex-direction:column;
+text-align:center;
+}
+
+.song-left img{
+width:100%;
+max-width:280px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<div class="navbar">
+
+<div class="logo">
+<span>●</span> ROMAN YOSI
+</div>
+
+<div class="menu">
+<a href="#">BERANDA</a>
+<a href="#">MUSIK</a>
+<a href="#">PODCAST</a>
+<a href="#">VIDEO</a>
+<a href="#">TENTANG</a>
+</div>
+
+</div>
+
+<div class="hero">
+
+<div class="hero-image">
+
+<img src="https://raw.githubusercontent.com/Mikolebak/romanyosi-music/main/roman-yosi-profile.png">
+
+<div class="blue-check">✓</div>
+
+</div>
+
+<div class="hero-text">
+
+<div class="top-title">
+ARTIS | MUSISI | PODCASTER
+</div>
+
+<h1>
+ROMAN YOSI
+<span class="verify-inline">✓</span>
+</h1>
+
+<div class="green-line"></div>
+
+<div class="bio">
+Musisi, pencipta lagu, dan podcaster yang menghadirkan karya dengan cerita nyata kehidupan.
+</div>
+
+<div class="buttons">
+
+<a href="#" class="btn spotify">
+🎧 Dengarkan di Spotify
+</a>
+
+<a href="#" class="btn follow">
+Ikuti Saya
+</a>
+
+</div>
+
+<div class="socials">
+
+<a href="https://instagram.com/kromantv1">
+📸 Instagram
+</a>
+
+<a href="https://tiktok.com/@romanyosi">
+🎵 TikTok
+</a>
+
+<a href="https://youtube.com/@romanyosi">
+▶ YouTube
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</header>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+🎧 MUSIK & PODCAST
+<div class="green-center"></div>
+</div>
+
+<div class="card">
+
+<div class="song-left">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop">
+
+<div class="song-info">
+
+<h3>Persinggahan Semu</h3>
+
+<p>Roman Yosi</p>
+
+<div class="preview">
+Preview
+</div>
+
+</div>
+
+</div>
+
+<div class="spotify-player">
+
+<iframe
+src="https://open.spotify.com/embed/episode/16DFqmPRCo3w92M9VTWPNI"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="song-left">
+
+<img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=800&auto=format&fit=crop">
+
+<div class="song-info">
+
+<h3>Hujan dan Cerita</h3>
+
+<p>Roman Yosi</p>
+
+<div class="preview">
+Preview
+</div>
+
+</div>
+
+</div>
+
+<div class="spotify-player">
+
+<iframe
+src="https://open.spotify.com/embed/episode/6s5bh0xDmZJJFee7bHdlcC"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="song-left">
+
+<img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=800&auto=format&fit=crop">
+
+<div class="song-info">
+
+<h3>Bahagia Tanpa Kamu</h3>
+
+<p>Roman Yosi</p>
+
+<div class="preview">
+Preview
+</div>
+
+</div>
+
+</div>
+
+<div class="spotify-player">
+
+<iframe
+src="https://open.spotify.com/embed/episode/5BJlk3qFQKOJ08J6X2x7LQ"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+🎬 VIDEO SPOTIFY
+<div class="green-center"></div>
+</div>
+
+<div class="card">
+
+<div class="song-left">
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop">
+
+<div class="song-info">
+
+<h3>Di Balik Lagu - Roman Yosi</h3>
+
+<p>Podcast & Video</p>
+
+</div>
+
+</div>
+
+<div class="spotify-player">
+
+<iframe
+src="https://open.spotify.com/embed/episode/38qcLd2F86xz63cUpH1naA"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Roman Yosi. All Rights Reserved.
+</footer>
+
+</body>
+</html>
