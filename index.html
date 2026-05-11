@@ -1,0 +1,443 @@
+```html id="w9k2pv"
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roman Yosi Music</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+z-index:-1;
+filter:blur(2px);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+header{
+padding:30px 0;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:800;
+}
+
+.logo span{
+color:#1DB954;
+}
+
+.menu{
+display:flex;
+gap:35px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+padding:60px 0;
+flex-wrap:wrap;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:340px;
+height:340px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid #6ea8ff;
+box-shadow:0 0 60px #6ea8ff;
+}
+
+.verify{
+position:absolute;
+bottom:15px;
+right:15px;
+background:#2f8cff;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+font-weight:bold;
+box-shadow:0 0 20px #2f8cff;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.small-title{
+color:#1DB954;
+font-size:18px;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.hero-text h1{
+font-size:80px;
+line-height:1;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.bio{
+font-size:22px;
+line-height:1.8;
+color:#ddd;
+max-width:700px;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+font-size:18px;
+}
+
+.spotify{
+background:#1DB954;
+color:black;
+}
+
+.follow{
+border:2px solid #666;
+color:white;
+}
+
+.socials{
+margin-top:35px;
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.socials a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.section{
+padding:50px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+font-weight:800;
+margin-bottom:50px;
+}
+
+.card{
+background:rgba(15,15,15,.95);
+border-radius:28px;
+padding:25px;
+margin-bottom:30px;
+border:1px solid #222;
+}
+
+.card h3{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#bbb;
+margin-bottom:20px;
+font-size:18px;
+}
+
+iframe{
+width:100%;
+height:152px;
+border:none;
+border-radius:16px;
+}
+
+.about{
+background:#111;
+padding:35px;
+border-radius:25px;
+font-size:18px;
+line-height:1.9;
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:50px 20px;
+color:#888;
+border-top:1px solid #222;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.hero{
+justify-content:center;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:55px;
+}
+
+.hero-image img{
+width:260px;
+height:260px;
+}
+
+.socials{
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+<div class="logo">
+<span>●</span> ROMAN YOSI
+</div>
+
+<div class="menu">
+<a href="#">Beranda</a>
+<a href="#">Musik</a>
+<a href="#">Podcast</a>
+<a href="#">Video</a>
+</div>
+
+</div>
+
+<div class="hero">
+
+<div class="hero-image">
+
+<img src="https://raw.githubusercontent.com/Mikolebak/romanyosi-music/main/roman-yosi-profile.png" alt="Roman Yosi">
+
+<div class="verify">✓</div>
+
+</div>
+
+<div class="hero-text">
+
+<div class="small-title">
+ARTIS • MUSISI • PODCASTER
+</div>
+
+<h1>ROMAN YOSI</h1>
+
+<div class="bio">
+Musisi independen Indonesia dengan karya musik emosional, podcast cerita kehidupan, dan nuansa modern seperti profil artis Spotify profesional.
+</div>
+
+<div class="buttons">
+
+<a href="#" class="btn spotify">
+🎧 Dengarkan Sekarang
+</a>
+
+<a href="#" class="btn follow">
+Ikuti Saya
+</a>
+
+</div>
+
+<div class="socials">
+
+<a href="https://instagram.com/kromantv1">
+📸 Instagram
+</a>
+
+<a href="https://tiktok.com/@romanyosi">
+🎵 TikTok
+</a>
+
+<a href="https://youtube.com/@romanyosi">
+▶ YouTube
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+🎧 Musik & Podcast
+</div>
+
+<div class="card">
+
+<h3>Spotify Episode 1</h3>
+
+<p>Roman Yosi Official Podcast</p>
+
+<iframe
+src="https://open.spotify.com/embed/episode/16DFqmPRCo3w92M9VTWPNI"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+<div class="card">
+
+<h3>Spotify Episode 2</h3>
+
+<p>Karya dan cerita kehidupan Roman Yosi</p>
+
+<iframe
+src="https://open.spotify.com/embed/episode/6s5bh0xDmZJJFee7bHdlcC"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+<div class="card">
+
+<h3>Spotify Episode 3</h3>
+
+<p>Musik original Roman Yosi</p>
+
+<iframe
+src="https://open.spotify.com/embed/episode/5BJlk3qFQKOJ08J6X2x7LQ"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+🎬 Video Spotify
+</div>
+
+<div class="card">
+
+<h3>Video Roman Yosi</h3>
+
+<p>Spotify Video & Podcast</p>
+
+<iframe
+src="https://open.spotify.com/embed/episode/38qcLd2F86xz63cUpH1naA"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+🔥 Tentang Roman Yosi
+</div>
+
+<div class="about">
+
+Roman Yosi adalah artis musik independen Indonesia yang menciptakan karya original penuh emosi, perjalanan hidup, dan nuansa modern misterius.
+Website ini berisi musik, podcast, video Spotify, dan seluruh profil resmi Roman Yosi.
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Roman Yosi Music — All Rights Reserved
+</footer>
+
+</body>
+</html>
+```
